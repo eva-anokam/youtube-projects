@@ -1,0 +1,108 @@
+@font-face {
+    font-family:  Figtree;
+    src: url("./assets/fonts/Figtree-VariableFont_wght.ttf");
+}
+
+/* 
+---------
+Custom properties
+----------
+*/
+:root{
+    --clr-primary:  hsl(47, 88%, 63%);
+
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-500: hsl(0, 0%, 50%);
+    --clr-neutral-900: hsl(0, 0%, 7%);
+
+    --ff-primary: Figtree;
+}
+
+/* 
+---------
+Resets
+----------
+*/
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+    font-family: var(--ff-primary) ;
+    background-color: var(--clr-primary);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    padding-block: 100px;
+}
+
+img{
+    width: 100%;
+}
+
+h1{
+    font-size: 1.75rem;
+    font-weight: 800;
+}
+
+/* 
+---------
+Utility classes
+----------
+*/
+.container{
+    width: min(90%, 30rem);
+    margin-inline: auto;
+}
+
+.space-content > * + * {
+    margin-top: var(--space, 1rem);
+}
+.text-yellow{
+    background-color: var(--clr-primary);
+    font-weight: 800;
+    padding: 5px;
+    width: 100px;
+    text-align: center;
+    border-radius: 5px;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+.flex img{
+    max-width: 70%;
+}
+
+.flex p{
+    font-weight: 800;
+}
+/* 
+---------
+Main
+----------
+*/
+main{
+    background-color: var(--clr-neutral-100);
+    padding: 20px;
+    border: 2px solid var(--clr-neutral-900);
+    border-radius: 20px;
+    box-shadow: 10px 10px 0px 0px var(--clr-neutral-900);
+}
+
+.img-container img{
+    border-radius: 10px;
+}
+
+.description{
+    color: var(--clr-neutral-500);
+}
+
+.attribution{
+    padding-block: 50px;
+}
+
+.attribution a{
+    color: var(--clr-neutral-500);
+}
