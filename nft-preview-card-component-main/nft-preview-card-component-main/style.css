@@ -1,0 +1,123 @@
+/* Custom properties */
+:root{
+    --clr-primary: hsl(215, 51%, 70%);
+    --clr-secondary: hsl(178, 100%, 50%);
+
+    --clr-main-bg: hsl(217, 54%, 11%);
+    --clr-card-bg: hsl(216, 50%, 16%);
+    --clr-card-line: hsl(215, 32%, 27%);
+
+    --clr-white: hsl(0, 0%, 100%);
+
+    --ff-primary: "Outfit", sans-serif;
+
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-600: 600;
+}
+/* Resets */
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--ff-primary);
+    font-size: 16px;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    padding-block: 5rem;
+    background-color: var(--clr-main-bg);
+    color: var(--clr-primary);
+}
+
+img{
+    max-width: 100%;
+}
+
+h1{
+    color: var(--clr-white);
+    font-size: 1.5rem;
+}
+/* Utility classes */
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
+}
+
+.hover-text{
+    color: white;
+    cursor: pointer;
+}
+
+.hover-text:hover{
+    color: var(--clr-secondary);
+}
+.accent-text{
+    color: var(--clr-secondary);
+}
+
+/* Main */
+main{
+    width: min(90%, 20rem);
+    background-color: var(--clr-card-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.img-container{
+    position: relative;
+    cursor: pointer;
+    
+}
+
+.img-container img{
+    border-radius: 10px;
+}
+
+.img-container::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 99%;
+    background-color: var(--clr-secondary);
+    background-image: url("./images/icon-view.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    border-radius: 10px;
+    transition: all .5s;
+}
+
+.img-container:hover::before{
+    opacity: .75;
+}
+
+.text-container > * + * {
+    margin-top: 1rem;
+}
+
+.pricing{
+    padding-bottom: 1rem;
+    border-bottom: 1.25px solid var(--clr-card-line);
+}
+
+.footer img{
+    width: 50px;
+    border: 1px solid var(--clr-white);
+    border-radius: 50%;
+}
+
+.attribution{
+    padding-block: 3rem;
+    font-size: 12px;
+}
+.attribution a{
+    color: var(--clr-secondary);
+}

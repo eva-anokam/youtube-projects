@@ -1,0 +1,126 @@
+/* Custom properties */
+
+:root{
+    --clr-cyan:  hsl(179, 62%, 43%);
+    --clr-cyan-light:  hsl(179, 62%, 45%);
+    --clr-yellow: hsl(71, 73%, 54%);
+
+    --clr-light-gray: hsl(204, 43%, 93%);
+    --clr-blue: hsl(218, 22%, 67%);
+
+    --ff-primary: "Karla", sans-serif;
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+/* Resets */
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    padding-block: 5rem;
+    background-color: var(--clr-light-gray);
+    color: white;
+    font-family: var(--ff-primary);
+}
+
+/* Utility classes */
+.text-cyan{
+    color: var(--clr-cyan);
+}
+
+.text-yellow{
+    color: var(--clr-yellow);
+    font-weight: var(--fw-bold);
+}
+
+.text-big{
+    font-size: 2.5rem;
+    font-weight: var(--fw-bold);
+}
+
+/* Main */
+main{
+    width: min(90%, 50rem);
+    display: grid;
+    grid-template-columns: 1fr;
+    box-shadow: 0px 0px 10px 4px hsl(204, 43%, 83%);
+    border-radius: 10px;
+}
+
+.card{
+    background-color: var(--bg-color, white);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: space-evenly;
+}
+
+.card a{
+    display: block;
+    background-color: var(--clr-yellow);
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding-block: 1rem;
+    font-size: 1.25rem;
+    font-weight: var(--fw-bold);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px grey;
+}
+
+.card-white{
+    color: var(--clr-blue) ;
+    border-radius: 10px;
+}
+
+.card-cyan{
+    --bg-color: var(--clr-cyan)
+}
+
+.card-cyan-light{
+    --bg-color: var(--clr-cyan-light);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.card-cyan-light ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+/* Footer */
+
+footer{
+    padding-block: 5rem;
+    color: var(--clr-blue);
+}
+
+footer a{
+    color: var(--clr-cyan);
+}
+
+@media(min-width: 1200px) {
+    main{
+        grid-template-columns: 1fr 1fr;
+    }
+    .card-white{
+        grid-column: span 2;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    .card-cyan{
+        border-bottom-left-radius: 10px;
+    }
+    .card-cyan-light{
+        border-bottom-left-radius: 0px;
+    }
+}

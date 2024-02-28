@@ -1,0 +1,49 @@
+/* Resets */
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    padding-block: 5rem;
+    background-color: hsl(212, 45%, 89%);
+    color: hsl(220, 15%, 55%);
+    font-family: "Outfit", sans-serif;
+}
+
+h1{
+    color: hsl(218, 44%, 22%);
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+img{
+    max-width: 100%;
+}
+/* Utility classes */
+.flow-content > * + * {
+    margin-top: 1rem;
+}
+
+/* Main */
+main{
+    background-color: white;
+    width: min(90%, 20rem);
+    padding: 20px 20px 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.img-container img{
+    border-radius: 10px;
+}
+
+.attribution{
+    padding-block: 3rem;
+}
+
+.attribution a{
+    color: hsl(218, 44%, 22%);
+}
